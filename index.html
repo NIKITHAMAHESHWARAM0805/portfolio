@@ -121,4 +121,89 @@
 <section id="projects" class="bg-light">
   <div class="container">
     <h2 class="text-primary mb-4">Projects</h2>
-    <div class="row g-4"
+    <div class="row g-4">
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="project1.jpg" class="card-img-top project-img" alt="Malware Detection Project">
+          <div class="card-body">
+            <h5 class="card-title">Malware Detection Using Community Detection</h5>
+            <p class="card-text">Designed and implemented a data-driven project integrating ML models with cloud platforms to analyze and visualize large datasets effectively.</p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm">
+          <img src="project2.jpg" class="card-img-top project-img" alt="Gesture Control System Project">
+          <div class="card-body">
+            <h5 class="card-title">Gesture-based Home Appliances Control System</h5>
+            <p class="card-text">Developed a gesture-based home appliances control system using motion sensors and microcontrollers to assist disabled individuals in operating devices effortlessly.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Certificates -->
+<section id="certificates" class="container">
+  <h2 class="text-primary mb-4">Certificates</h2>
+  <ul class="list-group">
+    <li class="list-group-item"><i class="bi bi-patch-check-fill text-success"></i> AWS Cloud Practitioner Certification</li>
+    <li class="list-group-item"><i class="bi bi-patch-check-fill text-success"></i> Cyber Security Certification by CISCO</li>
+    <li class="list-group-item"><i class="bi bi-patch-check-fill text-success"></i> Java Certification by Great Learning</li>
+  </ul>
+</section>
+
+<!-- Contact -->
+<section id="contact" class="container">
+  <h2 class="text-primary mb-4">Contact</h2>
+  <p><i class="bi bi-envelope"></i> Email: <a href="mailto:nikithamaheshwaram@gmail.com">nikithamaheshwaram@gmail.com</a></p>
+  <p><i class="bi bi-phone"></i> Phone: +91 9030882741</p>
+  <p><i class="bi bi-linkedin"></i> LinkedIn: <a href="https://www.linkedin.com/in/nikithamaheshwaram-9593aa2a7" target="_blank">View Profile</a></p>
+</section>
+
+<!-- Footer -->
+<footer>
+  <p>&copy; 2025 Nikitha Maheshwaram</p>
+</footer>
+
+<!-- Bootstrap JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+
+<!-- Typing Effect Script -->
+<script>
+  const typingElement = document.querySelector(".typing");
+  const texts = [
+    "AWS Certified Cloud Practitioner",
+    "Cybersecurity (CISCO Certified)",
+    "Java Developer",
+    "Cloud Computing Enthusiast",
+    "AI & Machine Learning"
+  ];
+  let textIndex = 0;
+  let charIndex = 0;
+  let isDeleting = false;
+
+  function typeEffect() {
+    const currentText = texts[textIndex];
+    if (isDeleting) {
+      typingElement.textContent = currentText.substring(0, charIndex--);
+    } else {
+      typingElement.textContent = currentText.substring(0, charIndex++);
+    }
+
+    if (!isDeleting && charIndex === currentText.length) {
+      isDeleting = true;
+      setTimeout(typeEffect, 1000);
+      return;
+    } else if (isDeleting && charIndex === 0) {
+      isDeleting = false;
+      textIndex = (textIndex + 1) % texts.length;
+    }
+    setTimeout(typeEffect, isDeleting ? 50 : 100);
+  }
+  typeEffect();
+</script>
+
+</body>
+</html>

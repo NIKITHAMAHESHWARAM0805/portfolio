@@ -1,4 +1,3 @@
-
 /* General Reset */
 * {
   margin: 0;
@@ -15,7 +14,7 @@ body {
 
 /* Header */
 header {
-  background: linear-gradient(90deg, #149ddd, #13c2c2);
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: white;
   padding: 1.5rem;
   text-align: center;
@@ -26,16 +25,40 @@ header h1 {
   margin-bottom: 0.5rem;
 }
 
+/* Navigation links styled as buttons */
 header nav a {
+  display: inline-block;
+  background: #203a43;
   color: white;
-  margin: 0 15px;
+  margin: 5px;
+  padding: 8px 15px;
+  border-radius: 5px;
   text-decoration: none;
   font-weight: bold;
-  transition: color 0.3s ease;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
 }
 
 header nav a:hover {
-  color: #ffeb3b;
+  background: #00f5d4;
+  color: #203a43;
+  transform: translateY(-2px);
+}
+
+/* Buttons */
+.btn-custom {
+  background: #203a43;
+  color: white;
+  padding: 8px 15px;
+  border-radius: 5px;
+  text-decoration: none;
+  display: inline-block;
+  transition: background 0.3s ease, color 0.3s ease, transform 0.2s ease;
+}
+
+.btn-custom:hover {
+  background: #00f5d4;
+  color: #203a43;
+  transform: translateY(-2px);
 }
 
 /* Section */
@@ -46,9 +69,9 @@ section {
 }
 
 section h2 {
-  color: #149ddd;
+  color: #203a43;
   margin-bottom: 20px;
-  border-bottom: 2px solid #149ddd;
+  border-bottom: 2px solid #00f5d4;
   display: inline-block;
   padding-bottom: 5px;
 }
@@ -69,12 +92,18 @@ section h2 {
 }
 
 #skills li {
-  background: #149ddd;
+  background: #203a43;
   color: white;
   padding: 8px 15px;
   border-radius: 20px;
   list-style: none;
   font-size: 0.9rem;
+  transition: background 0.3s ease;
+}
+
+#skills li:hover {
+  background: #00f5d4;
+  color: #203a43;
 }
 
 /* Projects */
@@ -84,12 +113,14 @@ section h2 {
   padding: 20px;
   margin-bottom: 20px;
   box-shadow: 0 4px 8px rgba(0,0,0,0.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border 0.3s ease;
+  border: 2px solid transparent;
 }
 
 #projects div:hover {
   transform: translateY(-5px);
-  box-shadow: 0 8px 16px rgba(0,0,0,0.1);
+  box-shadow: 0 8px 16px rgba(0,0,0,0.15);
+  border: 2px solid #00f5d4;
 }
 
 #projects img {
@@ -105,17 +136,18 @@ section h2 {
 }
 
 #contact a {
-  color: #149ddd;
+  color: #203a43;
   text-decoration: none;
 }
 
 #contact a:hover {
+  color: #00f5d4;
   text-decoration: underline;
 }
 
 /* Footer */
 footer {
-  background: #149ddd;
+  background: linear-gradient(90deg, #0f2027, #203a43, #2c5364);
   color: white;
   text-align: center;
   padding: 1rem;
